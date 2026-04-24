@@ -80,6 +80,10 @@ public class ModConfig {
         @Config.RangeFloat(min = 0.1F, max = 64F)
         public static float ic2CropsYield = 4F;
 
+        @Config.Comment("CropsNH crops growth rate")
+        @Config.RangeFloat(min = 0.1F, max = 64F)
+        public static float cropsnhGrowthRate = 4F;
+
         @Config.Comment("GT ores drop rate")
         @Config.RangeFloat(min = 0.1F, max = 64F)
         public static float gtOresDrops = 4F;
