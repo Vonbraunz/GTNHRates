@@ -5,7 +5,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 import com.github.sladki.gtnhrates.ModConfig;
-
 import com.gtnewhorizon.cropsnh.tileentity.TileEntityCropSticks;
 
 @Mixin(value = TileEntityCropSticks.class, remap = false)
