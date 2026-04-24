@@ -35,7 +35,6 @@ public class LateMixinsLoader implements ILateMixinLoader {
         List<String> mixinsToLoad = new ArrayList<>(
             Arrays.asList(
                 "NaturaCrops",
-                "IC2Crops",
                 "GTOres",
                 "GTOres$Bartworks",
                 "GTOilDrill",
@@ -44,7 +43,7 @@ public class LateMixinsLoader implements ILateMixinLoader {
                 "GTFurnaces",
                 "GTFurnaces$BronzeFurnace",
                 "GTFurnaces$SteelFurnace",
-                "RailcraftCokeOvenRecipes",
+                // RailcraftCokeOvenRecipes removed, coke oven moved to GT, look at EventsHandler
                 "RailcraftSteamOven",
                 "GTMetaTools",
                 "ForestryBees",
@@ -57,6 +56,11 @@ public class LateMixinsLoader implements ILateMixinLoader {
         mixinsToLoad.addAll(Quests.mixins());
         if (loadedMods.contains("HungerOverhaul")) {
             mixinsToLoad.add("HungerOverhaulCrops");
+        }
+        if (loadedMods.contains("cropsnh")) {
+            mixinsToLoad.add("CropsNHCrops");
+        } else if (loadedMods.contains("IC2")) {
+            mixinsToLoad.add("IC2Crops");
         }
         return mixinsToLoad;
     }
